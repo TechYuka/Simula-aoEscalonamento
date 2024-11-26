@@ -314,7 +314,31 @@ int main() {
         }
         
         limparTela();  // Limpa a tela
-        cout << endl << "Relatório Final:" << endl << endl;
+        cout << endl << "Relatório Final:" << endl;
+        cout << endl <<" Usando";
+        switch (argumentoSeletor) {
+            case 'a':
+            case 'A': // FIFO (First In, First Out)
+                cout << " FIFO (First In, First Out)" << endl;
+                break;
+            case 'b':
+            case 'B': // SJF (Shortest Job First)
+                cout << " SJF (Shortest Job First)" << endl;
+                break;
+            case '5': // Meu algoritmo
+                cout << " Meu algoritimo" << endl;
+                break;
+            case 'c':
+            case 'C': // RR (Round Robin) com prioridade
+                cout << " RR (Round Robin) com prioridade" << endl;
+                break;
+            case 'D':
+            case 'd': // Escalonamento por Prioridade (Priority Scheduling)
+                cout << " Escalonamento por Prioridade (Priority Scheduling)" << endl;
+                break;
+        }
+        
+        cout << endl;
 
         // Exibe todos os processos finalizados na fila de prontos
         for (const auto& processo : listaDeProntos) {
@@ -338,7 +362,7 @@ int main() {
         cout << "\n";
         cout << endl << " A) voltar  || B) sair" << endl << endl;
         cin >> argumentoSeletorSaida;
-        if (argumentoSeletorSaida == 'b' || argumentoSeletor == 'B')
+        if (argumentoSeletorSaida == 'b' || argumentoSeletorSaida == 'B')
         {
             break;
         }
